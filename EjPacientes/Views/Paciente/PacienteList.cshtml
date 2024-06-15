@@ -1,0 +1,64 @@
+
+@model List<PacienteModel>
+
+@{
+    ViewData["Title"] = "Lista de Pacientes";
+    
+}
+<h1>@ViewData["Title"]</h1>
+
+<p></p>
+
+<h1 class="display-2"> Pacientes </h1>
+<a asp-action="PacienteAdd" asp-controller="Paciente"
+class="btn btn-primary mb-3">
+    Agregar Paciente 
+ </a>
+
+
+<h1 class="display-2"> Listado de Pacientes </h1>
+
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>Acciones</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Sexo</th>
+            <th>Celular</th>
+           
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var paci in Model)
+        {
+            <tr>
+                <td>
+                    <a class="btn btn-primary" asp-action="PacienteEdit" asp-controller="Paciente" asp-route-id="@paci.Id">Editar</a>
+                    <a class="btn btn-danger" asp-action="PacienteDeleted" asp-controller="Paciente" asp-route-id="@paci.Id">Borrar</a>
+                </td>
+                <td>
+                    @paci.Nombre
+                </td>
+                <td>
+                    @paci.Edad
+                </td>
+                <td>
+                    @paci.Sexo
+                </td>
+                <td>
+                    @paci.Celular
+                </td>
+                
+            </tr>
+        }
+
+    </tbody>
+
+    <tfoot>
+
+    </tfoot>
+
+</table>
+

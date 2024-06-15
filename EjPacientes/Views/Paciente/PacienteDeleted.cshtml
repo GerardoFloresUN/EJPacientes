@@ -1,0 +1,23 @@
+@model PacienteModel
+
+@{
+    ViewData["Title"] = "Borrar al Paciente";
+}
+
+<h3 class="mb-3"></h3>
+
+<form asp-asp-controller="Paciente" asp-action="PacienteDeleted">
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Informacion del paciente</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Esta seguro que quiere borrar el paciente</h6>
+        <p class="card-text"> Paciente: @Model.Nombre </p>
+        </div>
+</div>
+
+<input type="hidden" asp-for="Id" />
+<button type="submit" class="btn btn-danger">Borrar</button>
+<a class="btn btn-secondary" asp-action="PacienteList" asp-controller="Paciente">Cancelar</a>
+</form>
+
