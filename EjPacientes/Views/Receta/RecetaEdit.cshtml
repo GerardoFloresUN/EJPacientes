@@ -1,0 +1,36 @@
+@model RecetaModel
+
+@{
+    ViewData["Title"] = "Editar al Paciente";
+}
+
+<form  asp-controller="Receta" asp-action="RecetaEdit" >
+    <input type="hidden" asp-for"Id">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input asp-for="Nombre" type="text" class="form-control"  placeholder="Escriba el nombre del paciente" />
+    </div>
+
+    <div class="mb-3">
+        <label for="medicamento" class="form-label">Medicamento</label>
+        <input asp-for="Medicamento" type="text" class="form-control" placeholder="Escriba el medicamento" />
+    </div>
+
+      <div class="mb-3">
+        <label for="dosis" class="form-label">Dosis</label>
+        <input asp-for="Dosis" type="text" class="form-control" placeholder="Escriba la dosis del medicamento" />
+    </div>
+
+    <div class="mb-3">
+        <label for="frecuencia" class="form-label">Frecuencia</label>
+        <input asp-for="Frecuencia" type="text" class="form-control" placeholder="Escriba la frecuencia del medicamento" />
+    </div>
+
+    <br>
+    <button class="btn btn-primary mb-3" >Guardar</button>
+    <a class="btn btn-outline-secundary" asp-controller="Receta" asp-action="RecetaList">Regresar</a>
+</form>
+

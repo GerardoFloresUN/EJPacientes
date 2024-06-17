@@ -11,5 +11,7 @@ namespace EjPacientes
 
         public DbSet<Paciente> Pacientes { get; set; }
 
+        public DbSet<Receta> Recetas { get; set; }
+
     }
 }

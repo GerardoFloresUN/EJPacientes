@@ -1,0 +1,34 @@
+@using EjPacientes.Entities
+@model Receta
+
+@{
+    ViewData["Title"] = "Editar al Paciente";
+}
+
+
+<form asp-action="RecetaAdd" method="post" >
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escriba el nombre de la receta" />
+    </div>
+
+    <div class="mb-3">
+        <label for="medicamento" class="form-label">Medicamento</label>
+        <input type="text" class="form-control" id="medicamento" name="medicamento" placeholder="Escriba el medicamento" />
+    </div>
+
+    <div class="mb-3">
+        <label for="dosis" class="form-label">Dosis</label>
+        <input type="text" class="form-control" id="dosis" name="dosis" placeholder="Escriba la dosis del medicamento" />
+    </div>
+
+    <div class="mb-3">
+        <label for="frecuencia" class="form-label">Frecuencia</label>
+        <input type="text" class="form-control" id="frecuencia" name="frecuencia" placeholder="Escriba la frecuencia del medicamento" />
+    </div>
+    
+    <button class="btn btn-success mb-3" >Guardar</button>
+    <a class="btn btn-outline-secundary" asp-controller="Receta" asp-action="RecetaList">Regresar</a>
+</form>
+

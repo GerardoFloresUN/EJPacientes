@@ -1,0 +1,64 @@
+
+@model List<RecetaModel>
+
+@{
+    ViewData["Title"] = "Lista de Recetas";
+    
+}
+<h1>@ViewData["Title"]</h1>
+
+<p></p>
+
+<h1 class="display-2"> Recetas </h1>
+<a asp-action="RecetaAdd" asp-controller="Receta"
+class="btn btn-success mb-3">
+    Agregar Receta 
+ </a>
+
+
+<h1 class="display-2"> Listado de Recetas </h1>
+
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th>Acciones</th>
+            <th>Nombre</th>
+            <th>Medicamento</th>
+            <th>Dosis</th>
+            <th>Frecuencia</th>
+           
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var rec in Model)
+        {
+            <tr>
+                <td>
+                    <a class="btn btn-secondary" asp-action="RecetaEdit" asp-controller="Receta" asp-route-id="@rec.Id">Editar</a>
+                    <a class="btn btn-danger" asp-action="RecetaDeleted" asp-controller="Receta" asp-route-id="@rec.Id">Borrar</a>
+                </td>
+                <td>
+                    @rec.Nombre
+                </td>
+                <td>
+                    @rec.Medicamento
+                </td>
+                <td>
+                    @rec.Dosis
+                </td>
+                <td>
+                    @rec.Frecuencia
+                </td>
+                
+            </tr>
+        }
+
+    </tbody>
+
+    <tfoot>
+
+    </tfoot>
+
+</table>
+

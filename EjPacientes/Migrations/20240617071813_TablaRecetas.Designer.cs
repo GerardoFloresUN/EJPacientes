@@ -4,6 +4,7 @@ using EjPacientes;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EjPacientes.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240617071813_TablaRecetas")]
+    partial class TablaRecetas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,16 +42,11 @@ namespace EjPacientes.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("RecetaId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Sexo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("RecetaId");
 
                     b.ToTable("Pacientes");
                 });
@@ -78,20 +76,6 @@ namespace EjPacientes.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Recetas");
-                });
-
-            modelBuilder.Entity("EjPacientes.Entities.Paciente", b =>
-                {
-                    b.HasOne("EjPacientes.Entities.Receta", "Receta")
-                        .WithMany("Pacientes")
-                        .HasForeignKey("RecetaId");
-
-                    b.Navigation("Receta");
-                });
-
-            modelBuilder.Entity("EjPacientes.Entities.Receta", b =>
-                {
-                    b.Navigation("Pacientes");
                 });
 #pragma warning restore 612, 618
         }

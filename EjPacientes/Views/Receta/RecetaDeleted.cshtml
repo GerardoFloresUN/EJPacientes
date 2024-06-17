@@ -1,0 +1,23 @@
+@model RecetaModel
+
+@{
+    ViewData["Title"] = "Borrar la receta";
+}
+
+<h3 class="mb-3"></h3>
+
+<form asp-asp-controller="Receta" asp-action="RecetaDeleted">
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Informacion de la receta</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Esta seguro que quiere borrar la receta</h6>
+        <p class="card-text"> RecetaAdd: @Model.Nombre </p>
+        </div>
+</div>
+
+<input type="hidden" asp-for="Id" />
+<button type="submit" class="btn btn-danger">Borrar</button>
+<a class="btn btn-secondary" asp-action="RecetaList" asp-controller="Receta">Cancelar</a>
+</form>
+

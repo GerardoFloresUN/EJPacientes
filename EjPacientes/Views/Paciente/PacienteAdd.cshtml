@@ -27,37 +27,12 @@
         <label for="celular" class="form-label">Celular</label>
         <input type="text" class="form-control" id="celular" name="celular" placeholder="Escriba el celular del paciente" />
     </div>
+
+    @* <select class="form-select mb-3" asp-for="RecetaId" asp-items="@Model.ListRecetas">
+        <option>Seleccionar receta</option>
+    </select> *@
     
-    <button class="btn btn-primary mb-3" >Guardar</button>
+    <button class="btn btn-success mb-3" >Guardar</button>
     <a class="btn btn-outline-secundary" asp-controller="Paciente" asp-action="PacienteList">Regresar</a>
 </form>
 
-@* <form asp-controller="Paciente" asp-action="PacienteAdd">
-
-    <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escriba el nombre del paciente" />
-    </div>
-
-    <div class="mb-3">
-        <label for="nombre" class="form-label">Edad</label>
-        <input type="text" class="form-control" id="edad" name="edad" placeholder="Escriba la edad del paciente" />
-    </div>
-
-    <div class="mb-3">
-        <label for="carrera" class="form-label">Sexo</label>
-        <input type="text" class="form-control" id="sexo" name="sexo" placeholder="Escriba el sexo del paciente" />
-    </div>
-
-    <div class="mb-3">
-        <label for="edad" class="form-label">Celular</label>
-        <input type="text" class="form-control" id="celular" name="celular" placeholder="Escriba el celular del paciente" />
-    </div>
-
-    
-
-<button type="submit" class="btn btn-primary">Guardar</button>
-<a class="btn btn-secundary" asp-controller="Home" asp-action="Privacy"> Regresar </a>
-
-
-</form> *@

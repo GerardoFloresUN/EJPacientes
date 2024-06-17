@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 namespace EjPacientes.Models
 {
     public class PacienteModel
@@ -11,5 +13,13 @@ namespace EjPacientes.Models
         public string Sexo { get; set; }
 
         public string Celular { get; set; }
+
+        public Guid? RecetaId { get; set; }
+
+        public RecetaModel RecetaModel{ get; set; }
+
+        public string RecetaNombre { get; set; }
+
+        public List<SelectListItem> ListRecetas { get; set; }
     }
 }

@@ -42,6 +42,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcUGFjaWVudGVMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/UN/Tareas un/POO2/EjPacientes/EjPacientes/Views/Receta/RecetaAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXRhXFJlY2V0YUFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/UN/Tareas un/POO2/EjPacientes/EjPacientes/Views/Receta/RecetaDeleted.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXRhXFJlY2V0YURlbGV0ZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/UN/Tareas un/POO2/EjPacientes/EjPacientes/Views/Receta/RecetaEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXRhXFJlY2V0YUVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/UN/Tareas un/POO2/EjPacientes/EjPacientes/Views/Receta/RecetaList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXRhXFJlY2V0YUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/UN/Tareas un/POO2/EjPacientes/EjPacientes/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
