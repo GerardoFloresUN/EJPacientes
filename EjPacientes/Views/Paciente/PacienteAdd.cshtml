@@ -6,30 +6,30 @@
 }
 
 
-<form asp-action="PacienteAdd" method="post" class="text-center">
+<form asp-action="PacienteAdd" method="post" >
     <div asp-validation-summary="All" class="text-danger"></div>
-    <div>
-        <label class="from-label " for="Nombre">Paciente</label><br>
-        <input asp-for="Nombre" placeholder="Escriba el Nombre">
-        
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escriba el nombre del paciente" />
     </div>
-    <div>
-        <label for="Edad">Edad</label><br>
-        <input asp-for="Edad" placeholder="Escriba la Edad">
-             
+
+    <div class="mb-3">
+        <label for="edad" class="form-label">Edad</label>
+        <input type="text" class="form-control" id="edad" name="edad" placeholder="Escriba la edad del paciente" />
     </div>
-      <div>
-        <label for="Sexo">Sexo</label><br>
-        <input asp-for="Sexo" placeholder="Escriba el Sexo">
-            
+
+    <div class="mb-3">
+        <label for="sexo" class="form-label">Sexo</label>
+        <input type="text" class="form-control" id="sexo" name="sexo" placeholder="Escriba el sexo del paciente" />
     </div>
-    <div>
-        <label for="Celular">Celular</label><br>
-        <input asp-for="Celular" placeholder="Escriba el Celular">
-      
+
+    <div class="mb-3">
+        <label for="celular" class="form-label">Celular</label>
+        <input type="text" class="form-control" id="celular" name="celular" placeholder="Escriba el celular del paciente" />
     </div>
     
     <button class="btn btn-primary mb-3" >Guardar</button>
+    <a class="btn btn-outline-secundary" asp-controller="Paciente" asp-action="PacienteList">Regresar</a>
 </form>
 
 @* <form asp-controller="Paciente" asp-action="PacienteAdd">
