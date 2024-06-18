@@ -14,12 +14,7 @@ namespace EjPacientes.Models
 
         public string Celular { get; set; }
 
-        public Guid? RecetaId { get; set; }
-
-        public RecetaModel RecetaModel{ get; set; }
-
-        public string RecetaNombre { get; set; }
-
-        public List<SelectListItem> ListRecetas { get; set; }
+       
+        
     }
 }

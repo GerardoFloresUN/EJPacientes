@@ -12,8 +12,6 @@ namespace EjPacientes.Entities
 
         public string Celular { get; set; }
 
-        public Guid? RecetaId { get; set; }
-
-        public Receta? Receta { get; set; }
+        
     }
 }
